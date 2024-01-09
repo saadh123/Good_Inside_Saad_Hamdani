@@ -1,0 +1,104 @@
+.logo_Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25vh;
+}
+.logo {
+  display: block; /* Block level so we can choose margins vs inline */
+  margin: 0 auto; /* top/bottom 0, horizontal auto to center */
+  max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+  height: auto;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8vh;
+  text-shadow: 5px 6px 4px rgba(22, 14, 2, 0.3);
+  color: rgb(68, 51, 15);
+}
+
+.card_Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: -20vh;
+}
+
+/* .cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  figure out wrapping at bottom row for <= 4 users 
+} */
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  top: -23.5vh;
+}
+
+.button {
+  padding: 10px 15px;
+  color: #333;
+  border: 3px dashed #462f05;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+.button:hover {
+  background-color: #d2c78b;
+  color: #6f653a;
+  box-shadow: 2px 2px 4px rgba(10, 10, 10, 11.1);
+}
+
+.button:active {
+  background-color: #9e9874;
+  color: #3a3b18;
+  box-shadow: none;
+}
+
+/* figure out why Y axis change isn't working */
+.card-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.card-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 500ms, transform 500ms;
+}
+
+.card-exit {
+  opacity: 1;
+}
+
+.card-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 500ms, transform 500ms;
+}
+
+/* Fix phone screen views, test after Vercel deploy */
+
+@media only screen and (max-width: 600px) {
+  .title {
+    height: 10vh;
+  }
+
+  .card_Container {
+    min-height: 50vh;
+  }
+
+  .buttons {
+    margin-top: 4vh;
+  }
+}
