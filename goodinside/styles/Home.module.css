@@ -10,6 +10,7 @@
   max-width: 100%; /* Ensure the image doesn't exceed its container's width */
   height: auto;
   border: 2px solid;
+  border-color: black;
 }
 
 .title {
