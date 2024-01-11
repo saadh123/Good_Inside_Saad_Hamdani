@@ -1,0 +1,12 @@
+.type {
+  margin-top: 5%;
+  display: inline;
+  font-weight: 700;
+}
+
+.type li {
+  font-style: italic;
+  font-size: 0.75rem;
+  cursor: text;
+  color: rgb(68, 51, 15);
+}

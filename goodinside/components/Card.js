@@ -1,7 +1,7 @@
 import React from "react";
 import Headline from "./Headline";
 import styles from "../styles/Card.module.css";
-import TypeInfo from "./TypeInfo";
+import CardFooter from "./CardFooter";
 import CardBody from "./CardBody";
 //Each section of card should be separated and organized, making it easy to modularize and maintain.
 //Conditionally render different background-color depending on card_type for visual UI appeal
@@ -38,7 +38,7 @@ const Card = ({ card }) => {
       <div className={styles.card_footer}>
         {/* implement TypeInfo Component for dynamic content, incase we need to update UI easily  */}
         {card && card.type && (
-          <TypeInfo type={card.type} interstitial={card.interstitial_type} />
+          <CardFooter type={card.type} interstitial={card.interstitial_type} />
         )}
       </div>
     </div>

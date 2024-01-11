@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/TypeInfo.module.css";
+import styles from "../styles/CardFooter.module.css";
 
 const TypeInfo = ({ type, interstitial }) => {
   return (

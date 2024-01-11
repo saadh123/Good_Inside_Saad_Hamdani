@@ -42,24 +42,7 @@
   display: inline;
   color: rgb(68, 51, 15);
 }
-.headline {
-  margin-top: 5%;
-  cursor: pointer;
-  display: inline;
-  color: rgb(68, 51, 15);
-  font-weight: 1000;
-  font-size: large;
-  /* border: 2px solid #977f09;
-  border-radius: 8px; */
-}
 
-.card_footer {
-  margin-top: 5%;
-  cursor: default;
-  display: inline;
-  color: rgb(68, 51, 15);
-  font-weight: 700;
-}
 .card:hover {
   transform: scale(1.1);
 }
