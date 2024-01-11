@@ -39,6 +39,14 @@ export default function Home({ cards }) {
             src="./goodinside_logo.png"
             alt="Good Inside logo"
           />
+          {/* would this help with lazy loading and auto optimization? 
+          <Image
+            className={styles.logo}
+            src="/goodinside_logo.png"
+            alt="Good Inside logo"
+            width={width} // Specify the width
+            height={height} // Specify the height
+          /> */}
         </a>
       </div>
       <h1 className={styles.title}>Cards @ Good Inside</h1>
