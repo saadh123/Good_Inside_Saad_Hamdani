@@ -90,14 +90,29 @@ export default function Home({ cards }) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch(`https://bff.goodinside.dev/api/p/cards/mock`);
+  try {
+    const res = await fetch(`https://bff.goodinside.dev/api/p/cards/mock`);
 
-  const cards = await res.json();
-  return {
-    props: {
-      cards,
-    },
-  };
+    if (!res.ok) {
+      throw new Error("Failed to fetch data");
+    }
+
+    const cards = await res.json();
+
+    return {
+      props: {
+        cards,
+      },
+    };
+  } catch (error) {
+    console.error("Error fetching data:", error.message);
+
+    return {
+      props: {
+        cards: [],
+      },
+    };
+  }
 };
 
 //fetch Data using useEffect, empty [] for initial mount only.
