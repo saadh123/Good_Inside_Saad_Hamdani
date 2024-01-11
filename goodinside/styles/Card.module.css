@@ -28,7 +28,7 @@
   justify-content: flex-end;
   cursor: pointer;
   position: relative;
-  border-radius: 50%;
+  border-radius: 30%;
   border: 3px solid #756f51;
   box-shadow: 0 0 9px 3px rgba(0, 0, 0, 0.9);
 }
