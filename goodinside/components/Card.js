@@ -27,7 +27,7 @@ const Card = ({ card }) => {
         {card && card.headline !== null ? (
           <Headline headline={card.headline} />
         ) : (
-          <p>Check back tomorrow for a new headline!</p>
+          <p>*Check back tomorrow for a new headline!*</p>
         )}
       </div>
 
