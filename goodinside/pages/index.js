@@ -6,6 +6,7 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 export default function Home({ cards }) {
   console.log("CARDS", cards);
+  // const sortedCards = cards.sort((a, b) => a.card_id - b.card_id);
 
   //useState to assign each card an index and display that user on the card
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -54,7 +55,7 @@ export default function Home({ cards }) {
       {/***Main Container Div***/}
       <div className={styles.card_Container}>
         <TransitionGroup>
-          <CSSTransition key={currentIndex} timeout={750} classNames="card">
+          <CSSTransition key={currentIndex} timeout={750}>
             <Card card={cards[currentIndex]} />
           </CSSTransition>
         </TransitionGroup>
@@ -137,18 +138,3 @@ export const getStaticProps = async () => {
 //   fetchData();
 // }, []);
 //if choosing [currentIndex] dependency, get flashes of pic changes which means there is a rendering issue due to async nature of fetchData call
-
-// const titleColors = {
-//     Topic_Validation: styles.Topic_Validation,
-//     Topic_Learn: styles.Topic_Learn,
-//     community: styles.community,
-//     seasonal: styles.seasonal,
-//     General_Validation: styles.General_Validation,
-//     GI_Essentials: styles.GI_Essentials,
-//     age: styles.age,
-//   };
-
-//   const titleColor =
-//     titleColors[card.card_type.toLowerCase()] || styles.card_title;
-
-//   console.log(titleColor, "TITLECOLOR");
