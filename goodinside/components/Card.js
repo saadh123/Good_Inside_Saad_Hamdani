@@ -26,8 +26,6 @@ const getStyleForCardType = (cardType) => {
 };
 
 const Card = ({ card }) => {
-  console.log(card);
-
   return (
     <div className={styles.card}>
       <div className={styles.card_image}>{card.card_id}</div>

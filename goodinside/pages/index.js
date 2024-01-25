@@ -102,7 +102,7 @@ export const getStaticProps = async () => {
 
     return {
       props: {
-        cards,
+        cards: cards.cards,
       },
     };
   } catch (error) {
