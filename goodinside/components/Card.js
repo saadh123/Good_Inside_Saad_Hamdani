@@ -7,19 +7,19 @@ import CardBody from "./CardBody";
 const getStyleForCardType = (cardType) => {
   switch (cardType) {
     case "community":
-      return { color: "blue" };
+      return { color: "#88CABE" };
     case "General Validation":
-      return { color: "#3a3b18" };
+      return { color: "#8C9CB3" };
     case "Topic Learn":
-      return { color: "pink" };
+      return { color: "#F372C2" };
     case "Topic Validation":
       return { color: "brown" };
     case "seasonal":
-      return { color: "orange" };
+      return { color: "#D97629" };
     case "GI Essentials":
-      return { color: "purple" };
+      return { color: "#C76CF1" };
     case "age":
-      return { color: "yellow" };
+      return { color: "#E1F16C" };
     default:
       return {};
   }
