@@ -6,6 +6,27 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 export default function Home({ cards }) {
   console.log("CARDS", cards);
+
+  // const [users, setUsers] = useState([]);
+
+  // useEffect(() => {
+  //   //async/await vs .then nested calls
+  //   const fetchData = async () => {
+  //     try {
+  //       const res = await fetch(`https://bff.goodinside.dev/api/p/cards/mock`, {
+  //         headers: {
+  //           Accept: "application/json",
+  //         },
+  //       });
+  //       const userData = (await res.json()).results;
+  //       setUsers(userData);
+  //     } catch (error) {
+  //       console.log(`There is an error fetching data: ${error}`);
+  //     }
+  //   };
+  //   fetchData();
+  // }, []);
+
   // const sortedCards = cards.sort((a, b) => a.card_id - b.card_id);
 
   //useState to assign each card an index and display that user on the card
